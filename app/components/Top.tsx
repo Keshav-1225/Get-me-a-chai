@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const Top = () => {
     return (
         <div>
-            <div className='w-screen flex flex-col gap-4 items-center justify-center min-h-[30vh]'>
+            <div className='w-screen flex flex-col gap-4 mt-[5vh] items-center justify-center min-h-[30vh]'>
                 <div className='flex justify-center'>
                     <div className='font-extrabold text-6xl'>Get me a Chai</div>
                     <div className='h-fit'>
@@ -13,9 +13,9 @@ const Top = () => {
                     </div>
                 </div>
                 <div>A crowd-funding platform for creators. Get funded by your fans and followers. Start Now!</div>
-                <div>
-                    <Button >Button</Button>
-                    <Button>Read More</Button>
+                <div className='flex gap-4'>
+                    <Button variant={"blue"} className={"p-5"}>Start here</Button>
+                    <Button variant={"blue"} className={"p-5"}>Read More</Button>
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Link from 'next/link'
+import { Button } from '../../components/ui/button'
 const Navbar = () => {
   return (
     <div className='bg-gray-800 flex justify-between items-center py-4 text-gray-200'>
@@ -10,7 +11,13 @@ const Navbar = () => {
             <li className='hover:text-white hover:cursor-pointer'>About</li>
             <li className='hover:text-white hover:cursor-pointer'>Projects</li>
             <li className='hover:text-white hover:cursor-pointer'>Sign Up</li>
-            <li className='hover:text-white hover:cursor-pointer'>login</li>
+            <li className='hover:text-white hover:cursor-pointer'>
+            <Link href={"/login"}>
+            <Button variant={"white"}>
+              Login
+            </Button>
+            </Link>
+            </li>
         </ul>
       </div>
     </div>
