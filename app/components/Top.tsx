@@ -1,6 +1,6 @@
 import React from 'react'
 import coffeeBreakGif from "../assets/coffee-break.gif";
-
+import { Button } from '@/components/ui/button';
 
 const Top = () => {
     return (
@@ -13,7 +13,10 @@ const Top = () => {
                     </div>
                 </div>
                 <div>A crowd-funding platform for creators. Get funded by your fans and followers. Start Now!</div>
-                <div></div>
+                <div>
+                    <Button >Button</Button>
+                    <Button>Read More</Button>
+                </div>
             </div>
 
         </div>
