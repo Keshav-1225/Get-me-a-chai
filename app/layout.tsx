@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { cn } from "@/lib/utils";
+import SessionWrapper from "./components/SessionWrapper";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -33,9 +34,11 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <SessionWrapper>
         <Navbar />
         {children}
         <Footer />
+        </SessionWrapper>
         </body>
     </html>
   );
