@@ -46,17 +46,19 @@ const Profile = () => {
           <div>{`$15,450/release`}</div>
         </div>
       </div>
-      <div className='w-screen flex justify-around h-[40%]'>
-        <div className="supporters bg-gray-900 p-5 w-[40%] rounded-lg h-[20vh]">
-          <h2 className='text-2xl font-bold'>Supporters</h2>
-          <ul>
+      <div className='w-screen flex justify-around mb-9'>
+        <div className="supporters bg-gray-900 p-5 w-[40%] rounded-lg h-[40vh]">
+          <h2 className='text-2xl font-bold mb-5'>Supporters</h2>
+          <ul className='flex flex-col gap-4 overflow-y-scroll'>
             <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
             <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
             <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
             <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
           </ul>
         </div>
-        <div className="paymentCards bg-red-500 w-[40%]">Payments</div>
+        <div className="paymentCards bg-red-500 w-[40%]">
+          <h2>Make your Payment</h2>
+        </div>
       </div>
 
     </div>
