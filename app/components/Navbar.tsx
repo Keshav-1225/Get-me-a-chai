@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from '../../components/ui/button'
 const Navbar = () => {
   return (
-    <div className='bg-gray-800 flex justify-between items-center py-4 text-gray-200'>
+    <div className='bg-gray-900 flex justify-between items-center py-4 text-gray-200'>
       <div className="logo font-extrabold text-3xl hover:text-white hover:cursor-pointer">Get me a Chai</div>
       <div>
         <ul className='flex gap-4 pr-4'>
