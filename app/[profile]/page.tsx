@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import TiltedCard from '../../components/TiltedCard'
+import ElectricBorder from '../../components/ElectricBorder'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 type ProfilePageProps = {
@@ -14,7 +15,7 @@ const Profile = () => {
   const profile = params.profile
   return (
     <div className='text-white'>
-      
+
       {/* <div className="text-4xl">{`Hello ${profile}`}</div> */}
       <div className='relative'>
         <div className='cover w-screen h-[20vh] overflow-hidden mt-6'>
@@ -47,18 +48,32 @@ const Profile = () => {
         </div>
       </div>
       <div className='w-screen flex justify-around mb-9'>
-        <div className="supporters bg-gray-900 p-5 w-[40%] rounded-lg h-[40vh]">
-          <h2 className='text-2xl font-bold mb-5'>Supporters</h2>
-          <ul className='flex flex-col gap-4 overflow-y-scroll'>
-            <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
-            <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
-            <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
-            <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
-          </ul>
-        </div>
-        <div className="paymentCards bg-red-500 w-[40%]">
-          <h2>Make your Payment</h2>
-        </div>
+        <ElectricBorder
+          color="#7df9ff"
+          speed={1}
+          chaos={0.12}
+          thickness={2}
+          style={{ borderRadius: 16 }}
+        >
+          <div className="supporters bg-gray-900 p-5 w-[40vw] rounded-lg h-[40vh]">
+            <h2 className='text-2xl font-bold mb-5'>Supporters</h2>
+            <ul className='flex flex-col gap-4'>
+              <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
+              <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
+              <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
+              <li>{`Raghav Chadda paid $30 saying Mein hu lucky the racer`}</li>
+            </ul>
+          </div>
+        </ElectricBorder>
+        <ElectricBorder color="#7df9ff"
+          speed={1}
+          chaos={0.12}
+          thickness={2}
+          style={{ borderRadius: 16 }}>
+          <div className="paymentCards bg-gray-900 rounded-lg w-[40.vw] h-[40vh]">
+            <h2 className='text-2xl font-bold p-5'>Make your Payment</h2>
+          </div>
+        </ElectricBorder>
       </div>
 
     </div>
