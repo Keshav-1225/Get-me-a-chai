@@ -44,8 +44,8 @@ const Navbar = () => {
                   <DropdownMenuItem onClick={()=>{router.push(`/${session.user?.name}`)}}>
                     <UserIcon /> Your Profile 
                   </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <LogOut /> Dashboard 
+                  <DropdownMenuItem onClick={()=>{signOut()}}>
+                    <LogOut /> Sign-out
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
