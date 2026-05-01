@@ -20,7 +20,15 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_ID!,
       clientSecret: process.env.GOOGLE_SECRET!
     })
-  ],
+  ],callbacks:{
+    async signIn({account,}){
+      if (account?.provider)
+      {
+        console.log("Provider is : ",account.provider);
+      }
+      return true
+    }
+  }
 }
 const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST }
