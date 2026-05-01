@@ -1,28 +1,16 @@
 "use client"
 import { useSession, signIn, signOut } from "next-auth/react"
-
 import Link from 'next/link'
+
 import ChaiGif from '../assets/coffee-break.gif'
-// import { Field, FieldDescription, FieldLabel } from '../../components/ui/input'
 import { Input } from '../../components/ui/input'
 import { Button } from '../../components/ui/button'
 
 
 import { useRouter } from "next/navigation"
-// import 
 
 const page = () => {
   const { data: session } = useSession()
-  // if(session) {
-  //   return <>
-  //     Signed in as {session.user.email} <br/>
-  //     <button onClick={() => signOut()}>Sign out</button>
-  //   </>
-  // }
-  // return <>
-  //   Not signed in <br/>
-  //   <button onClick={() => signIn()}>Sign in</button>
-  // </>
   if (!session) {
     console.log(session)
 

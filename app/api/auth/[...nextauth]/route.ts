@@ -1,8 +1,14 @@
-import NextAuth from "next-auth"
+export const dynamic = "force-dynamic";
+import NextAuth, { type NextAuthOptions } from "next-auth"
 import GithubProvider from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
 
-export const authOptions = {
+
+import mongoose from "mongoose"
+import UserModel from "@/backend/models/Users"
+import PaymentModel from "@/backend/models/Payment"
+
+export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     GithubProvider({
@@ -17,4 +23,4 @@ export const authOptions = {
   ],
 }
 const handler = NextAuth(authOptions)
-export {handler as GET, handler as POST}
+export { handler as GET, handler as POST }
