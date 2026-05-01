@@ -8,12 +8,16 @@ import { Button } from '../../components/ui/button'
 
 
 import { useRouter } from "next/navigation"
+import { useEffect } from "react"
 
 const page = () => {
   const { data: session } = useSession()
-  if (!session) {
-    console.log(session)
+  const router = useRouter()
+  useEffect(()=>{
+    if(session) router.push("/")
+  },[session, router])
 
+  if (!session) {
     return (
       <div className='bg-blue-950 text-white min-h-screen'>
         {/* <div className='mt-6 w-screen flex justify-center text-4xl font-semibold'>Login to get your fans to support you</div> */}
@@ -56,9 +60,6 @@ const page = () => {
         </div>
       </div>
     )
-  }else{
-    const router = useRouter()
-    return(router.push("/"))
   }
 }
 
