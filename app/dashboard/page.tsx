@@ -26,8 +26,19 @@ const Dashboard = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <GradientText>
+    <div style={{ width: '100%', position: 'relative', minHeight: '100vh' }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+        <DarkVeil
+          hueShift={0}
+          noiseIntensity={0}
+          scanlineIntensity={0}
+          speed={0.5}
+          scanlineFrequency={0}
+          warpAmount={0}
+        />
+      </div>
+      <div className={styles.container}>
+        <GradientText>
         <h1 className="text-3xl font-bold text-center mb-9">Profile Dashboard</h1>
       </GradientText>
       <form onSubmit={handleSubmit} className={styles.formGrid}>
@@ -128,6 +139,7 @@ const Dashboard = () => {
         </div>
 
       </form>
+      </div>
     </div>
   )
 }
