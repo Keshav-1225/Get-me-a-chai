@@ -2,6 +2,10 @@
 import React from 'react'
 import TiltedCard from '../../components/TiltedCard'
 import ElectricBorder from '../../components/ElectricBorder'
+import { Input } from '../../components/ui/input'
+import { Field } from '@/components/ui/field'
+import { Button } from '@/components/ui/button'
+
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 type ProfilePageProps = {
@@ -19,7 +23,7 @@ const Profile = () => {
       {/* <div className="text-4xl">{`Hello ${profile}`}</div> */}
       <div className='relative'>
         <div className='cover w-screen h-[20vh] overflow-hidden mt-6'>
-          <Image alt='Banner' src={"https://main.assets.gameloft.com/assets/blog/central/SMU-mod-header.png"} width={1920} height={20}></Image>
+          <Image alt='Banner' src={"https://main.assets.gameloft.com/assets/blog/central/SMU-mod-header.png"} width={1920} height={20} loading='eager'></Image>
           <div className='absolute -bottom-[10vh] left-[46%] border-4 border-black rounded'>
             <TiltedCard
               imageSrc="https://dk2dv4ezy246u.cloudfront.net/widgets/sSwU0mKL75Z_large.jpg"
@@ -70,8 +74,23 @@ const Profile = () => {
           chaos={0.12}
           thickness={2}
           style={{ borderRadius: 16 }}>
-          <div className="paymentCards bg-gray-900 rounded-lg w-[40.vw] h-[40vh]">
+          <div className="paymentCards bg-gray-900 rounded-lg w-[40vw] h-[40vh]">
             <h2 className='text-2xl font-bold p-5'>Make your Payment</h2>
+            <div className='w-[80%] m-auto mt-5 flex flex-col gap-5'>
+              <Input placeholder='Type your Name:'></Input>
+              <Field orientation={"horizontal"}>
+                <Input placeholder='Type your message here'></Input>
+                <Button>Pay</Button>
+              </Field>
+              <Input placeholder='Pay for the chai...'></Input>
+              <Field orientation={"horizontal"} className='flex w-full justify-center'>
+                <Button>Pay $10</Button>
+                <Button>Pay $20</Button>
+                <Button>Pay $30</Button>
+                <Button>Pay $50</Button>
+                <Button>Pay $100</Button>
+              </Field>
+            </div>
           </div>
         </ElectricBorder>
       </div>
